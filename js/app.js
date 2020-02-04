@@ -26,8 +26,8 @@ const removeDepressedState = key => {
 };
 
 const calculate = (n1, operator, n2 = undefined) => {
-	var firstNumber = parseFloat(n1);
-	var secondNumber = parseFloat(n2);
+    let firstNumber = parseFloat(n1);
+	let secondNumber = parseFloat(n2);
 
 	if (operator === "add") return firstNumber + secondNumber;
 
@@ -64,7 +64,7 @@ keyContainer.addEventListener("click", function initialize(e) {
 		}
 
 		if (!action) {
-			console.log(previousKeyType);
+			
 			if (displayValue === "0" || previousKeyType == "operator") {
 				display.innerText = keyContent;
 				removeDepressedState(key);
